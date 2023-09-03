@@ -1,0 +1,73 @@
+:root {
+    --bright-org: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --bg-head-button: hsl(0, 0%, 95%);
+}
+* {
+    box-sizing: border-box;
+    font-family: "Lexend Deca";
+    font-weight: 400;
+}
+body {
+    background-color: var(--bg-head-button);
+    font-size: 15px;
+    margin: 0;
+    position: relative;
+}
+.main-button {
+    margin: 20px 0 0;
+    border: 5px solid var(--bg-head-button);
+    background-color: var(--bg-head-button);
+    border-radius: 45px;
+    padding: 6px 35px;
+    text-transform: capitalize;
+}
+
+main {
+    margin: 100px auto;
+    width: 90%;
+    height: 1062px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+main .part1,
+main .part2,
+main .part3 {
+    padding: 51px;
+}
+main h1 {
+    color: var(--bg-head-button);
+    font-family: "Big Shoulders Display";
+    font-weight: 700;
+}
+main p {
+    color: var(--paragraphs);
+}
+main .part1 {
+    background-color: var(--bright-org);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+main .part1 button {
+    color: var(--bright-org)
+}
+main .part2 {
+    background-color: var(--dark-cyan);
+}
+main .part2 button {
+    color: var(--dark-cyan)
+}
+main .part3 {
+    background-color: var(--very-dark-cyan);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+main .part3 button {
+    color: var(--very-dark-cyan)
+}
+
+
+
