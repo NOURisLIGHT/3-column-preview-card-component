@@ -1,73 +1,110 @@
 :root {
-    --bright-org: hsl(31, 77%, 52%);
-    --dark-cyan: hsl(184, 100%, 22%);
-    --very-dark-cyan: hsl(179, 100%, 13%);
-    --paragraphs: hsla(0, 0%, 100%, 0.75);
-    --bg-head-button: hsl(0, 0%, 95%);
+  --bright-org: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --bg-head-button: hsl(0, 0%, 95%);
 }
 * {
-    box-sizing: border-box;
-    font-family: "Lexend Deca";
-    font-weight: 400;
+  box-sizing: border-box;
+  font-family: "Lexend Deca";
+  font-weight: 400;
 }
 body {
-    background-color: var(--bg-head-button);
-    font-size: 15px;
-    margin: 0;
-    position: relative;
+  background-color: var(--bg-head-button);
+  font-size: 15px;
+  margin: 0;
+  position: relative;
 }
 .main-button {
-    margin: 20px 0 0;
-    border: 5px solid var(--bg-head-button);
-    background-color: var(--bg-head-button);
-    border-radius: 45px;
-    padding: 6px 35px;
-    text-transform: capitalize;
+  margin: 20px 0 0;
+  border: 3px solid var(--bg-head-button);
+  background-color: var(--bg-head-button);
+  border-radius: 45px;
+  padding: 6px 35px;
+  text-transform: capitalize;
 }
 
 main {
-    margin: 100px auto;
-    width: 90%;
-    height: 1062px;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
+  margin: 100px auto;
+  width: 90%;
+  height: 1062px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 main .part1,
 main .part2,
 main .part3 {
-    padding: 51px;
+  padding: 51px;
 }
 main h1 {
-    color: var(--bg-head-button);
-    font-family: "Big Shoulders Display";
-    font-weight: 700;
+  color: var(--bg-head-button);
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
 }
 main p {
-    color: var(--paragraphs);
+  color: var(--paragraphs);
 }
 main .part1 {
-    background-color: var(--bright-org);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  background-color: var(--bright-org);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 main .part1 button {
-    color: var(--bright-org)
+  color: var(--bright-org);
 }
 main .part2 {
-    background-color: var(--dark-cyan);
+  background-color: var(--dark-cyan);
 }
 main .part2 button {
-    color: var(--dark-cyan)
+  color: var(--dark-cyan);
 }
 main .part3 {
-    background-color: var(--very-dark-cyan);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 main .part3 button {
-    color: var(--very-dark-cyan)
+  color: var(--very-dark-cyan);
 }
 
-
-
+@media (min-width: 376px) {
+  main {
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, 1fr);
+    height: 585px;
+    width: 75%;
+  }
+  main h1 {
+    font-size: 50px;
+  }
+  main p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  main .part1 {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+  }
+  main .part3 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  main .part1,
+  main .part2,
+  main .part3 {
+    position: relative;
+  }
+  .main-button {
+    padding: 10px 25px;
+    position: absolute;
+    bottom: 51px;
+  }
+  .main-button:hover {
+    background-color: transparent;
+    color: var(--bg-head-button);
+  }
+}
